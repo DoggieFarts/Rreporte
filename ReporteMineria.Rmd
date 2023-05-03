@@ -1,0 +1,42 @@
+---
+title: "ReporteMineria"
+author: "Antonio David Gutiérrez Páez, Arnold Torres Maldonado"
+date: "2023-05-03"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+# Resumen
+Resumen tipo TT
+# Introducción
+La ciencia de datos es una disciplina que ha estado a la alza recientemente con los avances tecnológicos y con la cantidad de datos que se producen todos los días, siendo actualmente una disciplina indispensable para el análisis y tratamiento de datos en masa.
+
+Debido a esto, la relación entre el salario percibido para esta disciplina contra el año en el que una persona se dedicaba a esto va en subida, siendo el último año uno de los mejores pagados para esta profesión, esto también debido a la alta demanda de procesamiento de datos y la poca disponibilidad de personas profesionales que se dediquen a esta disciplina
+
+# Materiales y métodos
+Útilizamos el método de mínimos cuadros para observar la comparación entre los años y sus salarios percibidos, así como también utilizamos el modelo de predicción para conocer como es que se comportarán los salarios para esta profesión a lo largo de los años 2020 - 2023
+
+# Experimentación y resultados
+
+# Conclusiones
+
+# Referencias bibliográficas
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r salarios, echo=FALSE}
+plot(salarios[,"work_year"], salarios[,"salary"], main = "Relación entre el año en el que se trabaja y el salario recibido",
+     xlab = "Año", ylab = "Salario percibido", xlim=c(2019,2023), ylim=c(10000,400000))
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
