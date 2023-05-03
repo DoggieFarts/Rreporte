@@ -1,3 +1,4 @@
+salarios <- read.csv("ds_salaries.csv")
 options(scipen=999)
 plot(salarios[,"work_year"], salarios[,"salary"], main = "Relación entre el año en el que se trabaja y el salario recibido",
      xlab = "Año", ylab = "Salario percibido", xlim=c(2019,2023), ylim=c(10000,400000))
