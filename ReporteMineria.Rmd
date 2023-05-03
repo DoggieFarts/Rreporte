@@ -4,25 +4,37 @@ author: "Antonio David Gutiérrez Páez, Arnold Torres Maldonado"
 date: "2023-05-03"
 output: pdf_document
 ---
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
 # Resumen
+
 Resumen tipo TT
+
 # Introducción
-La ciencia de datos es una disciplina que ha estado a la alza recientemente con los avances tecnológicos y con la cantidad de datos que se producen todos los días, siendo actualmente una disciplina indispensable para el análisis y tratamiento de datos en masa.
-Debido a esto, la relación entre el salario percibido para esta disciplina contra el año en el que una persona se dedicaba a esto va en subida, siendo el último año uno de los mejores pagados para esta profesión, esto también debido a la alta demanda de procesamiento de datos y la poca disponibilidad de personas profesionales que se dediquen a esta disciplina
+
+La ciencia de datos es una disciplina que ha estado a la alza recientemente con los avances tecnológicos y con la cantidad de datos que se producen todos los días, siendo actualmente una disciplina indispensable para el análisis y tratamiento de datos en masa. Debido a esto, la relación entre el salario percibido para esta disciplina contra el año en el que una persona se dedicaba a esto va en subida, siendo el último año uno de los mejores pagados para esta profesión, esto también debido a la alta demanda de procesamiento de datos y la poca disponibilidad de personas profesionales que se dediquen a esta disciplina.
+
+`ai-jobs.net` es un sitio web donde usuarios publican ofertas de trabajo relacionadas con inteligencia artificial, machine learning y ciencia de datos con
 
 # Materiales y métodos
-Para el el flujo de trabajo del proyecto se hizo uso del modelo CRISP-DM (Cross Industry Standard Process for Data Mining) el cual plantea séis fases que tiene que pasar un proyecto de minería de datos: comprensión de problema, comprensión de los datos, preparación de los datos, modelado, evaluación e implementación del modelo generado.
-Utilizamos el método de mínimos cuadros para observar la comparación entre los años y sus salarios percibidos, así como también utilizamos el modelo de predicción para conocer como es que se comportarán los salarios para esta profesión a lo largo de los años 2020 - 2023 
+
+Para el el flujo de trabajo del proyecto se hizo uso del modelo CRISP-DM (Cross Industry Standard Process for Data Mining) el cual plantea seis fases que tiene que pasar un proyecto de minería de datos: comprensión de problema, comprensión de los datos, preparación de los datos, modelado, evaluación e implementación del modelo generado. Para observar la comparación entre los años y sus salarios percibidos, Utilizamos el método de regresión lineal por mínimos cuadrados así como el modelo de predicción para conocer como es que se comportarán los salarios para esta profesión a lo largo de los años 2020 - 2023.
+
+**\*explicar que es la reg lineal, describir el dataset, explicar el crispdm**
 
 # Experimentación y resultados
+
+**\*desglozar el modelo crisp, aplicar todas las secciones del crispdm**
 
 # Conclusiones
 
 # Referencias bibliográficas
-Chaki, A. (2023). Data Science Salaries 2023. [Conjunto de datos]. Kaggle. https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023
+
+Chaki, A. (2023). Data Science Salaries 2023. [Conjunto de datos]. Kaggle. <https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023>
+
 ```{r cars}
 summary(cars)
 ```
