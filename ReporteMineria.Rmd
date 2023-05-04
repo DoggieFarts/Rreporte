@@ -17,7 +17,7 @@ Resumen tipo TT
 
 La ciencia de datos es una disciplina que ha estado a la alza recientemente con los avances tecnológicos y con la cantidad de datos que se producen todos los días, siendo actualmente una disciplina indispensable para el análisis y tratamiento de datos en masa. Debido a esto, la relación entre el salario percibido para esta disciplina contra el año en el que una persona se dedicaba a esto va en subida, siendo el último año uno de los mejores pagados para esta profesión, esto también debido a la alta demanda de procesamiento de datos y la poca disponibilidad de personas profesionales que se dediquen a esta disciplina.
 
-`ai-jobs.net` es un sitio web donde usuarios publican ofertas de trabajo relacionadas con inteligencia artificial, machine learning y ciencia de datos con
+`ai-jobs.net` es un sitio web donde usuarios publican ofertas de trabajo relacionadas con inteligencia artificial, machine learning y ciencia de datos. Tiene un apartado dedicado para que personas que ya trabajan usando esas tecnologías publiquen de manera anónima detalles sobre su salario, esto con el objetivo de proporcionar una guía para los principiantes que quieren dedicarse a lo mismo.
 
 # Materiales y métodos
 
@@ -28,6 +28,66 @@ Para el el flujo de trabajo del proyecto se hizo uso del modelo CRISP-DM (Cross 
 # Experimentación y resultados
 
 **\*desglozar el modelo crisp, aplicar todas las secciones del crispdm**
+
+## Comprensión del problema
+
+esta fase implica comprender el
+
+problema de negocio que se desea resolver y definir los objetivos del
+
+proyecto de minería de datos. En esta fase también se debe
+
+identificar los recursos y limitaciones que pueden afectar el proyecto.
+
+## Comprensión de los datos
+
+en esta fase se recopilan y analizan los
+
+datos disponibles para el proyecto de minería de datos. Se debe
+
+evaluar la calidad de los datos y determinar si es necesario realizar
+
+alguna limpieza o transformación antes de comenzar el análisis.
+
+## Preparación de los datos
+
+una vez que se han recopilado los datos, se
+
+preparan para el análisis. Esto puede incluir la selección de variables
+
+relevantes y la creación de nuevas características derivadas de los
+
+datos originales.
+
+## Modelado
+
+en esta fase se aplican técnicas de modelado para
+
+construir un modelo que pueda predecir o clasificar los datos. Se
+
+prueban varios modelos y se evalúa su desempeño utilizando técnicas
+
+de validación cruzada.
+
+## Evaluación
+
+una vez que se ha construido el modelo, se evalúa su
+
+desempeño uglizando métricas de evaluación y se determina si el
+
+modelo es adecuado para el problema de negocio que se desea
+
+resolver.
+
+## Implementación del modelo generado
+
+finalmente, el modelo se implementa en el entorno
+
+de producción y se integra con los sistemas existentes. También se
+
+puede crear un plan de monitoreo y mantenimiento para garangzar
+
+que el modelo siga siendo efecgvo con el gempo.
 
 # Conclusiones
 
