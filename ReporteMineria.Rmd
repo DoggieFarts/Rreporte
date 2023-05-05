@@ -28,6 +28,30 @@ Para el el flujo de trabajo del proyecto se hizo uso del modelo CRISP-DM (Cross 
 # Experimentación y resultados
 
 **\*desglozar el modelo crisp, aplicar todas las secciones del crispdm**
+### Comprensión del problema
+Empezarémos a analizar los salarios que se perciben a través de los años y sus desviaciones estándar así como su promedio de los profesionistas de data mining, y observarémos si en un futuro dedicarse a esta área seguirá aumentando sus sueldos o en su defecto se mantendrán o incluso si se reducirán los salarios. Así también se realizará un análisis del nivel de experiencia que se necesita contra el salario percibido
+
+### Comprensión de los datos
+
+Tenemos un dataset que contiene 11 variables:
+
++ Año trabajado
++ Nivel de experiencia
++ Tipo de empleo
++ Titutlo del trabajo
++ Salario
++ Divisa del salario
++ Salario en dólares
++ Residencia
++ Trabajo remoto
++ Ubicación de la compañia
++ Tamaño de la compañia
+
+Debido a las diferencias de divisas utilizarémos la ariable del salario en dólares para normalizar los datos recibidos, año trabajado y el nivel de experiencia, por lo que primeramente harémos dos datas frames con (salario en dólares;año trabajado) y (salario en dólares;nivel de experiencia)
+
+### Preparación de los datos
+
+Vamos a relizar un data frame con los datos anteriormente mencionados, el nombre de este data frame será de "datos"
 
 # Conclusiones
 
