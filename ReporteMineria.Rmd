@@ -17,7 +17,7 @@ Resumen tipo TT
 
 La ciencia de datos es una disciplina que ha estado a la alza recientemente con los avances tecnológicos y con la cantidad de datos que se producen todos los días, siendo actualmente una disciplina indispensable para el análisis y tratamiento de datos en masa. Debido a esto, la relación entre el salario percibido para esta disciplina contra el año en el que una persona se dedicaba a esto va en subida, siendo el último año uno de los mejores pagados para esta profesión, esto también debido a la alta demanda de procesamiento de datos y la poca disponibilidad de personas profesionales que se dediquen a esta disciplina.
 
-`ai-jobs.net` es un sitio web donde usuarios publican ofertas de trabajo relacionadas con inteligencia artificial, machine learning y ciencia de datos con
+`ai-jobs.net` es un sitio web donde usuarios publican ofertas de trabajo relacionadas con inteligencia artificial, machine learning y ciencia de datos. Tiene un apartado dedicado para que personas que ya trabajan usando esas tecnologías publiquen de manera anónima detalles sobre su salario, esto con el objetivo de proporcionar una guía para los principiantes que quieren dedicarse a lo mismo.
 
 # Materiales y métodos
 
