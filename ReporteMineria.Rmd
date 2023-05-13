@@ -36,21 +36,40 @@ vamos a normalizar datos?
 Se empezó por analizar los salarios que se perciben a través de los años y sus desviaciones estándar, después lo hicimos con el promedio de los profesionistas de data mining.
 ### Entendimiento de los datos
 Tenemos un conjunto de datos que contiene 11 variables:
-+ Año trabajado
-+ Nivel de experiencia
-+ Tipo de empleo
-+ Titutlo del trabajo
-+ Salario
-+ Divisa del salario
-+ Salario en dólares
-+ Residencia
-+ Trabajo remoto
-+ Ubicación de la compañia
-+ Tamaño de la compañia
-Debido a las diferencias de divisas utilizaremos la variable del salario en dólares para normalizar los datos recibidos, año trabajado y el nivel de experiencia, por lo que primeramente se hicieron dos data frames. El primero con las variables salario en dólares y año trabajado; y el segundo con el salario en dólares y el nivel de experiencia.
++ Año trabajado: desde 2020 hasta 2023.
++ Nivel de experiencia: Ingeniero Senior (SE), Gerente/Instructor (MI), Nivel Principiante (EN) y Experto (EX).
++ Tipo de empleo: Tiempo completo (FT), independiente (FL) y por contrato (CT).
++ Título del trabajo.
++ Salario.
++ Divisa del salario.
++ Salario en dólares.
++ Lugar de residencia.
++ Trabajo remoto (en porcentaje).
++ Ubicación de la compañia.
++ Tamaño de la compañia: pequeña (S), mediana (M) y grande (L).
+Debido a las diferencias de divisas utilizaremos la variable del salario en dólares para normalizar los datos recibidos, año trabajado y el nivel de experiencia, por lo que en primera instancia se hicieron dos data frames. El primero con las variables salario en dólares y año trabajado; y el segundo con el salario en dólares y el nivel de experiencia.
 ### Preparación de los datos
-Realizamos un data frame con los datos anteriormente mencionados, el nombre de este data frame será de "datos"
-En el conjunto de datos original la variable del tamaño de la compañía venía representado con letras (L para un tamaño grande, M para mediano y S para chico) por lo que tuvimos que cambiarlo a números quedando de la forma (L para un tamaño grande, M para mediano y S para chico).
+Realizamos un data frame llamado `work_2020` con los datos anteriormente mencionados.
+```{r cars}
+# Cambiar valores de exp a numeros
+work_2020<-data.frame(salarios[salarios$work_year == '2020.0'])
+```
+En el conjunto de datos original la variable del tamaño de la compañía venía representado con letras (L para un tamaño grande, M para mediano y S para chico) por lo que tuvimos que cambiarlo a números quedando de la forma (3 para un tamaño grande, 2 para mediano y 1 para chico). Ocurrió lo mismo para los valores de la variable experiencia, estos se generaron como sigue: SE con el número 1, MI con el 2, EN con el 3 y EX con el 4.
+```{r cars}
+# Cambiar valores de exp a numeros
+for (x in 1 : length(experiencia)) {
+  if (str_detect(experiencia[[x]], "SE")) experienciaNueva[x] <- 1 #1 para SE
+   if(str_detect(experiencia[[x]],"MI")) experienciaNueva[x] <- 2 #2 para MI
+   if(str_detect(experiencia[[x]],"EN")) experienciaNueva[x] <- 3 #3 para EN
+   if(str_detect(experiencia[[x]],"EX")) experienciaNueva[x] <- 4 #4 para EX
+}
+#Cambiar valores de tamaño de empresa a numeros
+for (x in 1 : length(tamano)) {
+  if (str_detect(tamano[[x]], "M")) tamanoNuevo[x] <- 2 #2 para mediano
+  if(str_detect(tamano[[x]],"L")) tamanoNuevo[x] <- 3 #3 para grande
+  if(str_detect(tamano[[x]],"S")) tamanoNuevo[x] <- 1 #1 para pequeño
+}
+```
 ## Conclusiones
 
 ## Referencias
