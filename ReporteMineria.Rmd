@@ -9,32 +9,33 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Resumen
-
-Resumen tipo TT
-
-# Introducción
-
+## Resumen (Abstract)
+Los objetivos de esta investigación son conocer los paises donde los cientificos de datos tienen más ingresos económicos por el trabajo que desempeñan y predecir si a futuro en estos paises se seguirá percibiendo ese nivel de ingresos. Estas incógnitas se resuelven usando el modelo de minería de datos CRISP-DM para crear un modelo de regresión lineal, el cual arroja que los X paises donde las profesiones mencionadas son más pagadas son X,Y y Z; también se da a conocer que estos paises seguirán siendo en los que mayor salario percibe un científico de datos.
+## Introducción
 La ciencia de datos es una disciplina que ha estado a la alza recientemente con los avances tecnológicos y con la cantidad de datos que se producen todos los días, siendo actualmente una disciplina indispensable para el análisis y tratamiento de datos en masa. Debido a esto, la relación entre el salario percibido para esta disciplina contra el año en el que una persona se dedicaba a esto va en subida, siendo el último año uno de los mejores pagados para esta profesión, esto también debido a la alta demanda de procesamiento de datos y la poca disponibilidad de personas profesionales que se dediquen a esta disciplina.
-
-`ai-jobs.net` es un sitio web donde usuarios publican ofertas de trabajo relacionadas con inteligencia artificial, machine learning y ciencia de datos. Tiene un apartado dedicado para que personas que ya trabajan usando esas tecnologías publiquen de manera anónima detalles sobre su salario, esto con el objetivo de proporcionar una guía para los principiantes que quieren dedicarse a lo mismo.
-
-# Materiales y métodos
-
-Para el el flujo de trabajo del proyecto se hizo uso del modelo CRISP-DM (Cross Industry Standard Process for Data Mining) el cual plantea seis fases que tiene que pasar un proyecto de minería de datos: comprensión de problema, comprensión de los datos, preparación de los datos, modelado, evaluación e implementación del modelo generado. Para observar la comparación entre los años y sus salarios percibidos, Utilizamos el método de regresión lineal por mínimos cuadrados así como el modelo de predicción para conocer como es que se comportarán los salarios para esta profesión a lo largo de los años 2020 - 2023.
-
-**\*explicar que es la reg lineal, describir el dataset, explicar el crispdm**
-
-# Experimentación y resultados
-
-**\*desglozar el modelo crisp, aplicar todas las secciones del crispdm**
+Por estas razones se plantea generar un modelo que explique la relación entre variables como los años de experiencia y el país donde el trabajador reside,  para que a partir de este se puedan generar conclusiones que sirvan para que una persona que quiera dedicarse a esta rama de las ciencias de la computación tome desiciones informadas.
+## Marco teorico
+La ciencia de datos es un campo multidisciplinario que combina conceptos y técnicas de matemáticas, estadísticas, informática y dominios específicos para abordar problemas relacionados con el manejo y análisis de datos. Implica la recopilación, limpieza, procesamiento, análisis y visualización de datos con el objetivo de obtener información valiosa y útil para la toma de decisiones. (InLab FIB, s.f.). Así pues, los científicos de datos son profesionales especializados en la recopilación, análisis y interpretación de grandes volúmenes de datos complejos extraen conocimientos para la toma de decisiones informadas, pueden descubrir patrones, identificar tendencias y realizar predicciones. Algunas de las razones por las que estos cobraron tanta importancia son:
+-  La toma de decisiones basadas en datos: Ayudan a las organizaciones a tomar decisiones fundamentadas en información cuantitativa y basada en evidencia, en lugar de depender únicamente de intuiciones o suposiciones.
+-  La mejora de la eficiencia y la productividad: Al analizar grandes cantidades de datos, los científicos de datos pueden identificar patrones y tendencias que pueden ayudar a mejorar la eficiencia operativa, optimizar procesos y aumentar la productividad.
+-  La innovación y ventaja competitiva: La ciencia de datos permite descubrir ideas innovadoras y soluciones que pueden impulsar la innovación y la ventaja competitiva de una organización. Al aprovechar los datos, los científicos de datos pueden identificar nuevas oportunidades de negocio, mejorar productos y servicios existentes, e incluso crear nuevos modelos de negocio.
+La disciplina de científico de datos tiene sus raíces en campos como las estadísticas, la informática y la inteligencia artificial. A medida que la tecnología y la cantidad de datos han aumentado exponencialmente, la necesidad de expertos en ciencia de datos se ha vuelto cada vez más importante. La disciplina ha evolucionado rápidamente en las últimas décadas, impulsada por avances en el procesamiento de datos, el aprendizaje automático y la inteligencia artificial. Se espera que esta disciplina siga creciendo y desempeñe un papel fundamental en la sociedad y los negocios. Con el avance de la tecnología y la creciente disponibilidad de datos, se prevé que la demanda de científicos de datos continúe en aumento. Además, se espera que se desarrollen nuevas técnicas y enfoques en la ciencia de datos, lo que permitirá un análisis más sofisticado y una toma de decisiones más precisa y basada en datos (Manyika et al., 2011).
+## Materiales y Métodos
+Para desarrollar el modelo de regresión lineal hicimos uso de la metodología Cross Industry Standard Process for Data Mining (CRISP-DM por sus siglas), esta es una metodología para la minería de datos que se utiliza comúnmente en el análisis de datos empresariales. La metodología consta de seis fases: 
+1. Comprensión del problema: esta fase inicia por comprender los requisitos y objetivos del proyecto para establecer un contexto.
+2. Entendimiento de los datos: consiste en explorar y analizar los datos disponibles para obtener una comprensión detallada de su contenido, calidad y estructura.
+3. Preparación de los datos: fase donde se realizan tareas de limpieza, transformación y selección de datos para garantizar la calidad y adecuación de los mismos para el análisis.
+4. Modelado: periodo de aplicar técnicas de minería de datos y construir modelos predictivos o descriptivos utilizando algoritmos apropiados.
+5. Evaluación: fase para poner a prueba el rendimiento y la eficacia de los modelos construidos mediante métricas y pruebas para verificar su validez y precisión.
+6. Despliegue: donde se implementan los resultados y las conclusiones del proyecto en el entorno.
+Por otra parte, la regresión lineal es una técnica conocida de modelado estadístico que se utiliza para analizar la relación entre dos variables continuas. Se utiliza para predecir el valor de una variable dependiente a partir del valor de una o más variables independientes, esta asume que la relación entre las variables es lineal, lo que significa que el cambio en la variable independiente tiene un cambio proporcional en la variable dependiente. Una forma de aplicar la regresión lineal es mediante el método de mínimos cuadrados, este es un método matemático utilizado para encontrar una línea de regresión que mejor se ajusta a los datos. El objetivo del método es minimizar la suma de los cuadrados de las diferencias entre los valores observados y los valores predichos por la línea de regresión.
+El conjunto de datos que se analizó proviene de el sitio web ai-jobs.net, el cual es un lugar donde usuarios publican ofertas de trabajo relacionadas con inteligencia artificial, machine learning y ciencia de datos. Tiene un apartado dedicado para que personas que ya trabajan usando esas tecnologías publiquen de manera anónima detalles sobre su trabajo tales como su salario, experiencia o lugar de residencia; esto con el objetivo de proporcionar una guía para los principiantes que quieren dedicarse a lo mismo. 
+vamos a normalizar datos?
+## Experimentación y Resultados
 ### Comprensión del problema
-Empezarémos a analizar los salarios que se perciben a través de los años y sus desviaciones estándar así como su promedio de los profesionistas de data mining, y observarémos si en un futuro dedicarse a esta área seguirá aumentando sus sueldos o en su defecto se mantendrán o incluso si se reducirán los salarios. Así también se realizará un análisis del nivel de experiencia que se necesita contra el salario percibido
-
-### Comprensión de los datos
-
-Tenemos un dataset que contiene 11 variables:
-
+Se empezó por analizar los salarios que se perciben a través de los años y sus desviaciones estándar, después lo hicimos con el promedio de los profesionistas de data mining.
+### Entendimiento de los datos
+Tenemos un conjunto de datos que contiene 11 variables:
 + Año trabajado
 + Nivel de experiencia
 + Tipo de empleo
@@ -46,18 +47,18 @@ Tenemos un dataset que contiene 11 variables:
 + Trabajo remoto
 + Ubicación de la compañia
 + Tamaño de la compañia
-
-Debido a las diferencias de divisas utilizarémos la ariable del salario en dólares para normalizar los datos recibidos, año trabajado y el nivel de experiencia, por lo que primeramente harémos dos datas frames con (salario en dólares;año trabajado) y (salario en dólares;nivel de experiencia)
-
+Debido a las diferencias de divisas utilizaremos la variable del salario en dólares para normalizar los datos recibidos, año trabajado y el nivel de experiencia, por lo que primeramente se hicieron dos data frames. El primero con las variables salario en dólares y año trabajado; y el segundo con el salario en dólares y el nivel de experiencia.
 ### Preparación de los datos
+Realizamos un data frame con los datos anteriormente mencionados, el nombre de este data frame será de "datos"
+En el conjunto de datos original la variable del tamaño de la compañía venía representado con letras (L para un tamaño grande, M para mediano y S para chico) por lo que tuvimos que cambiarlo a números quedando de la forma (L para un tamaño grande, M para mediano y S para chico).
+## Conclusiones
 
-Vamos a relizar un data frame con los datos anteriormente mencionados, el nombre de este data frame será de "datos"
-
-# Conclusiones
-
-# Referencias bibliográficas
-
-Chaki, A. (2023). Data Science Salaries 2023. [Conjunto de datos]. Kaggle. <https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023>
+## Referencias
+1.  Chapman, P., Clinton, J., Kerber, R., Khabaza, T., Reinartz, T., Shearer, C., & Wirth, R. (2000). CRISP-DM 1.0: Step-by-step data mining guide. CRISP-DM Consortium.
+2. InLab FIB. (s.f.). ¿Qué es un Data Scientist? Recuperado de [https://inlab.fib.upc.edu/es/blog/que-es-un-data-scientist](https://inlab.fib.upc.edu/es/blog/que-es-un-data-scientist)
+3. Davenport, T. H., & Patil, D. J. (2012). Data scientist: The sexiest job of the 21st century. Harvard Business Review, 90(10), 70-76.
+4. 1.  Manyika, J., Chui, M., Brown, B., Bughin, J., Dobbs, R., Roxburgh, C., & Byers, A. H. (2011). Big data: The next frontier for innovation, competition, and productivity. McKinsey Global Institute.
+5. Chaki, A. (2023). Data Science Salaries 2023. [Conjunto de datos]. Kaggle. <https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023>
 
 ```{r cars}
 summary(cars)
