@@ -21,6 +21,7 @@ La ciencia de datos es un campo multidisciplinario que combina conceptos y técn
 -  La innovación y ventaja competitiva: La ciencia de datos permite descubrir ideas innovadoras y soluciones que pueden impulsar la innovación y la ventaja competitiva de una organización. Al aprovechar los datos, los científicos de datos pueden identificar nuevas oportunidades de negocio, mejorar productos y servicios existentes, e incluso crear nuevos modelos de negocio.
 La disciplina de científico de datos tiene sus raíces en campos como las estadísticas, la informática y la inteligencia artificial. A medida que la tecnología y la cantidad de datos han aumentado exponencialmente, la necesidad de expertos en ciencia de datos se ha vuelto cada vez más importante. La disciplina ha evolucionado rápidamente en las últimas décadas, impulsada por avances en el procesamiento de datos, el aprendizaje automático y la inteligencia artificial. Se espera que esta disciplina siga creciendo y desempeñe un papel fundamental en la sociedad y los negocios. Con el avance de la tecnología y la creciente disponibilidad de datos, se prevé que la demanda de científicos de datos continúe en aumento. Además, se espera que se desarrollen nuevas técnicas y enfoques en la ciencia de datos, lo que permitirá un análisis más sofisticado y una toma de decisiones más precisa y basada en datos (Manyika et al., 2011).
 ## Materiales y Métodos
+Para la investigación se usó el lenguaje de programación R, R es un lenguaje de programación estadística ampliamente utilizado para análisis de datos, modelado estadístico y visualización. Es una plataforma gratuita y de código abierto que ofrece una amplia gama de herramientas y paquetes especializados para el procesamiento y análisis de datos. RStudio, por otro lado, es un entorno de desarrollo integrado (IDE) diseñado específicamente para trabajar con R. Proporciona una interfaz gráfica fácil de usar que facilita la escritura, ejecución y depuración de código en R. RStudio también ofrece características adicionales como paneles de visualización, administración de proyectos y colaboración en línea, lo que lo convierte en una herramienta popular entre los usuarios de R.
 Para desarrollar el modelo de regresión lineal hicimos uso de la metodología Cross Industry Standard Process for Data Mining (CRISP-DM por sus siglas), esta es una metodología para la minería de datos que se utiliza comúnmente en el análisis de datos empresariales. La metodología consta de seis fases: 
 1. Comprensión del problema: esta fase inicia por comprender los requisitos y objetivos del proyecto para establecer un contexto.
 2. Entendimiento de los datos: consiste en explorar y analizar los datos disponibles para obtener una comprensión detallada de su contenido, calidad y estructura.
@@ -54,22 +55,13 @@ Realizamos un data frame llamado `work_2020` con los datos anteriormente mencion
 # Cambiar valores de exp a numeros
 work_2020<-data.frame(salarios[salarios$work_year == '2020.0'])
 ```
-En el conjunto de datos original la variable del tamaño de la compañía venía representado con letras (L para un tamaño grande, M para mediano y S para chico) por lo que tuvimos que cambiarlo a números quedando de la forma (3 para un tamaño grande, 2 para mediano y 1 para chico). Ocurrió lo mismo para los valores de la variable experiencia, estos se generaron como sigue: SE con el número 1, MI con el 2, EN con el 3 y EX con el 4.
-```{r cars}
-# Cambiar valores de exp a numeros
-for (x in 1 : length(experiencia)) {
-  if (str_detect(experiencia[[x]], "SE")) experienciaNueva[x] <- 1 #1 para SE
-   if(str_detect(experiencia[[x]],"MI")) experienciaNueva[x] <- 2 #2 para MI
-   if(str_detect(experiencia[[x]],"EN")) experienciaNueva[x] <- 3 #3 para EN
-   if(str_detect(experiencia[[x]],"EX")) experienciaNueva[x] <- 4 #4 para EX
-}
-#Cambiar valores de tamaño de empresa a numeros
-for (x in 1 : length(tamano)) {
-  if (str_detect(tamano[[x]], "M")) tamanoNuevo[x] <- 2 #2 para mediano
-  if(str_detect(tamano[[x]],"L")) tamanoNuevo[x] <- 3 #3 para grande
-  if(str_detect(tamano[[x]],"S")) tamanoNuevo[x] <- 1 #1 para pequeño
-}
-```
+En el conjunto de datos original la variable del tamaño de la compañía venía representado con letras (L para un tamaño grande, M para mediano y S para chico) por lo que tuvimos que cambiarlo a números quedando de la forma (3 para un tamaño grande, 2 para mediano y 1 para chico). Ocurrió lo mismo para los valores de la variable experiencia, estos se generaron como sigue: SE con el número 1, MI con el 2, EN con el 3 y EX con el 4. Por último, para la variable de tipo de trabajo designamos que FT sería el 3, CT el 2 y FL el 1. Estos cambios de valores fueron hechos con la herramienta de buscar y reemplazar del editor de texto de RStudio.
+### Modelado
+Una vez listas nuestras variables, generamos un modelo de regresión lineal con estas.
+
+Generamos una gráfica para que se viera más clara la relación:
+
+Y después hicimos una predicción.
 ## Conclusiones
 
 ## Referencias
